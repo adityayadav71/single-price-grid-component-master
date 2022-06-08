@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Karla", sans-serif;
+}
+
+h2 {
+  color: #2ab2af;
+  margin-bottom: 24px;
+}
+
+h3 {
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 20px;
+}
+
+p {
+  color: #98a7bd;
+}
+
+.container {
+  display: grid;
+  width: 600px;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 20px 20px 30px #d6dce5;
+  border-radius: 10px;
+}
+
+.top-card,
+.bottom-left-card,
+.bottom-right-card {
+  padding: 40px;
+}
+.top-card {
+  grid-column: 1 / -1;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.bottom-left-card {
+  background-color: #2ab2af;
+  color: #6ac9c7;
+  border-bottom-left-radius: 10px;
+}
+
+.bottom-left-card h3,
+.bottom-right-card h3,
+.bottom-left-card p {
+  color: #d4f0ef;
+}
+
+.bottom-left-card p {
+  font-size: 14px;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.text {
+  margin-bottom: 30px;
+}
+span {
+  color: hsl(204, 43%, 93%);
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #6ac9c7;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: hsl(71, 73%, 54%);
+  color: #fff;
+  border: none;
+  justify-content: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-right-card {
+  background-color: #6ac9c7;
+  border-bottom-right-radius: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+  color: hsl(204, 43%, 93%);
+}
+
+li:last-child {
+  margin: 0;
+}
+
+@media all and (max-width: 375px) {
+  body {
+    height: 140vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+  .bottom-left-card {
+    border-bottom-left-radius: 0;
+  }
+  .bottom-right-card {
+    border-bottom-left-radius: 10px;
+  }
+  .top-card,
+  .bottom-left-card,
+  .bottom-right-card {
+    padding: 30px;
+  }
+}
